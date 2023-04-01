@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path( 'url address', 'view', name)
-    path('', include('website.urls'))    
+    path('', include('website.urls')),    
+    path('blog/', include('blog.urls'))
 ]
 
 urlpatterns += static(settings.STATIC_URL, documnet_root = settings.STATIC_URL)

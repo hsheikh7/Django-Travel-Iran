@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404 
 from blog.models import Post
+#from django.core.pageintiator import Paginator, 
 
 # Create your views here.
 def blog_view(request):
     posts = Post.objects.filter(status = 1).order_by('-publish_date')
+    #if kwargs.get('tag_name')  != None:
+    #   posts = posts.filter(
     context = {'posts': posts}
     return render(request, 'blog/blog-home.html', context )
  

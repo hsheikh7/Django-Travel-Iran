@@ -16,7 +16,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete= models.CASCADE)    
     title = models.CharField(max_length= 255)
     content = models.TextField()
-    tage = TaggableManager()
+    tags = TaggableManager()
     category = models.ManyToManyField(Category)    
     counted_view = models.IntegerField(default=0)
     status = models.BooleanField(default=False)

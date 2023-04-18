@@ -57,7 +57,7 @@
 					<div class="col-lg-9 col-md-9">
 						<h3 class="mt-20 mb-20">{{post.title}}</h3>
 						<p class="excert">
-							{{post.content}}
+							{{post.content|safe}}
 						</p>
 
 					</div>
@@ -240,10 +240,9 @@
 						<a href="#"><img class="img-fluid" src="{% static 'img/blog/ads-banner.jpg' %}" alt=""></a>
 					</div>
 					{% postcategories %}
-
 					{% include 'blog/blog-newsletter.html' %}
-
 					{% include 'blog/blog-tags.html' %}
+					
 				</div>
 			</div>
 		</div>

@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 # Application definition
 
@@ -38,12 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig', 
+    'django.contrib.sites', 
     'blog',
     'django.contrib.humanize',
     'django_extensions',
-    'django.contrib.sites', 
     'robots', 
     'debug_toolbar',
+    'taggit',
 ]
 
 MIDDLEWARE = [

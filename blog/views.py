@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404 
-from blog.models import Post
+from blog.models import Post, Comment 
 #from django.core.pageintiator import Paginator, 
 
 # Create your views here.
@@ -13,8 +13,10 @@ def blog_view(request):
 def blog_single(request, pid ):
     posts = Post.objects.filter(status = 1) 
     post = get_object_or_404(posts, pk = pid) 
-    context = {'post': post} 
+    comments = Comment.objects.filter(post = post.id, approved = True).order_by('-created_date') 
+    context = {'post': post, 'comments': comments} 
     return render(request, 'blog/blog-single.html', context)
+
 
 def test(request, pid ):
     post = get_object_or_404(Post, pk = pid ) 

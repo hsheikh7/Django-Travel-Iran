@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps', 
     'django_summernote', 
     'robots', 
-    'captcha',
+    #'captcha',
     'blog',
     'django.contrib.humanize',
     'django_extensions',

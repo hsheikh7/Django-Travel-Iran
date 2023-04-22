@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from taggit.managers import TaggableManager
 from django.urls import reverse
+from django.views.generic.detail import DetailView
 
 # Create your models here.
 class Category(models.Model): 
@@ -26,15 +27,11 @@ class Post(models.Model):
     
     class Meta: 
         ordering = ['-created_date']    
-
     def __str__(self):
         return self.title
         #return " {} - {}".format(self.title, self.id ) 
-
-
     def snippets(self): 
         return self.content[:150] + '...'
-
     def get_absolute_url(self):
         return reverse('blog:single', kwargs={'pid':self.id})
     
@@ -54,3 +51,5 @@ class Comment(models.Model):
         
     def __str__(self):
         return self.name 
+
+

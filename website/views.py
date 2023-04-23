@@ -18,12 +18,13 @@ def contact_view(request):
 
 def test_view(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST) 
+        form = ContactForm(request.POST)  
         if form.is_valid():
             name = form.cleaned_data['name']
             subject = form.cleaned_data['subject']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
+            #email = form.cleaned_data['email']
+            #message = form.cleaned_data['message']
+            #print(name, subject, email, message)
             return HttpResponse('done')
         else: 
             return HttpResponse('Not Valid')

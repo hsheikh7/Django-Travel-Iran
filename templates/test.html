@@ -1,4 +1,6 @@
 {% load static %}
+{% load blog_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +10,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hey I am here </h1>
-    <h3>All Posts: {{ posts }}</h3>
-    <h3>Previous Post: {{ previouspost }}</h3>
-    <h3>Current Post: {{ post }}</h3>
-    <h3>Next Post: {{ nextpost }}</h3>
-        
-    <h3></h3>
+    
+    {% latestposts %}
+
 </body>
 </html>

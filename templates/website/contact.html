@@ -61,7 +61,7 @@
 			<div class="col-lg-8">
 				<form class="form-area contact-form text-right" action="{% url 'website:contact' %}" method="post">
 					<div class="row">
-						{% csrf_token %}	
+						{% csrf_token %}
 						
 						<div class="col-lg-6 form-group">
 							<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
@@ -73,7 +73,7 @@
 								onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
 								class="common-input mb-20 form-control" required="" type="email">
 
-							<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
+							<input name="subject1" placeholder="Enter subject" onfocus="this.placeholder = ''"
 								onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control"
 								required="" type="text">
 						</div>
@@ -83,7 +83,7 @@
 								required=""></textarea>
 						</div>
 						<div class="col-lg-12">
-								{{form.captcha}}
+							{{form.captcha}}
 							<div class="alert-msg" style="text-align: left;"></div>
 							<button type="submit" class="genric-btn primary" style="float: right;">Send Message</button>
 						</div>

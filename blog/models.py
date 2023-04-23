@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from taggit.managers import TaggableManager
 from django.urls import reverse
-from django.views.generic.detail import DetailView
+
 
 # Create your models here.
 class Category(models.Model): 

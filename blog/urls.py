@@ -10,6 +10,7 @@ urlpatterns = [
     path('<int:pid>', blog_single, name = 'single'),
     path('category/<str:cat_name>', blog_category, name = 'category'),
     path('tag/<str:tag_name>', blog_category, name = 'tag'),
+    path('test', test, name = 'test'),
     #path('post-<int:pid>', test, name = 'test'),
-
+    
 ]

@@ -48,22 +48,23 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig', 
     'django.contrib.sites', 
     'django.contrib.sitemaps', 
+    'captcha',
     'django_summernote', 
     'robots', 
-    #'captcha',
+    
     'blog',
     'django.contrib.humanize',
     'django_extensions',
 
     'debug_toolbar',
     'taggit',
+    'accounts',
 ]
 
 #Captcha Admin Settings
 MULTI_CAPTCHA_ADMIN = {
-
-    'engin': 'simple-captcha',
-}
+'engin': 'simple-captcha',
+ }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

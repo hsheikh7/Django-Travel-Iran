@@ -1,12 +1,13 @@
 from django import forms
 from website.models import Contact
-from captcha.fields import CaptchaField
+#from captcha.fields import CaptchaField
 
 class ContactForm(forms.ModelForm):
-
-    captcha = CaptchaField() 
+    
+    #captcha = CaptchaField() 
     class Meta: 
         model = Contact
-        fields = '__all__'
-        #['name','email'] - 
-        #exclude = ['name']
+        fields = ['name','email', 'subject', 'massage']
+        #'__all__' - #['name','email'] - #exclude = ['name']
+
+

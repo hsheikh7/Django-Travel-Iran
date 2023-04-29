@@ -21,12 +21,6 @@ def latestposts(arg=3):
     posts= Post.objects.filter(status= 1).order_by('-publish_date')[:arg]
     return {'posts': posts}
 
-@register.inclusion_tag('website/latestposts-landing.html')
-def latestpostslanding(arg=6):
-    posts = Post.objects.filter(status = 1).filter(publish_date__lte = Now()).order_by('-publish_date')[:arg]
-    return {'posts': posts}
-
-
 @register.inclusion_tag('blog/blog-post-categories.html')
 def postcategories():
     posts = Post.objects.filter(status = 1)

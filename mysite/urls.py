@@ -41,7 +41,7 @@ urlpatterns = [
 
     path('accounts', include('accounts.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path('captcha/', include('captcha.urls')), 
+    #path('captcha/', include('captcha.urls')), 
     path('__debug__/', include('debug_toolbar.urls')),
     
 

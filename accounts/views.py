@@ -6,11 +6,13 @@ def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username') 
         password = request.POST.get('password') 
+        print("Username:   ", username, "   Password:  ",password)
         user = authenticate(request, username = username, password = password)
+        
         if user is not None: 
             print("Amir")
             login(request, user)
-            return redirect('/')
+            return redirect('www.google.com')
         else: 
             print("Gorbe")
 

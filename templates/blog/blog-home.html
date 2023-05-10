@@ -10,12 +10,9 @@
 		<div class="row d-flex align-items-center justify-content-center">
 			<div class="about-content blog-header-content col-lg-12">
 				<h1 class="text-white">
-					Dude You’re Getting
-					a Telescope
+					Get Started Adventure 
 				</h1>
-				<p class="text-white">
-					There is a moment in the life of any aspiring astronomer that it is time to buy that first
-				</p>
+				<p class="text-white"> Take only memories, leave only footprints. – Chief Seattle </p>
 			</div>
 		</div>
 	</div>
@@ -54,9 +51,9 @@
 									src="{% static 'img/blog/cat-widget2.jpg' %}" alt="">
 							</div>
 							<div class="content-details">
-								<h4 class="content-title mx-auto text-uppercase">Politics</h4>
+								<h4 class="content-title mx-auto text-uppercase">Sports</h4>
 								<span></span>
-								<p>Be a part of politics</p>
+								<p>Move your body, cherish life</p>
 							</div>
 						</a>
 					</div>
@@ -74,7 +71,7 @@
 							<div class="content-details">
 								<h4 class="content-title mx-auto text-uppercase">Food</h4>
 								<span></span>
-								<p>Let the food be finished</p>
+								<p>Discover new tastes </p>
 							</div>
 						</a>
 					</div>
@@ -111,7 +108,8 @@
 					</div>
 					<div class="col-lg-9 col-md-9 ">
 						<div class="feature-img">
-							<img class="img-fluid" src="{% static 'img/blog/feature-img1.jpg' %}" alt="">
+							<!--{% static 'img/blog/feature-img1.jpg' %} --> 
+							<img class="img-fluid" src={{post.image.url}} alt="">
 						</div>
 						<a class="posts-title" href="{% url 'blog:single' pid=post.id %}">
 							<h3> {{post.title}} </h3>

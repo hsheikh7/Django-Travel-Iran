@@ -6,7 +6,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="{% static 'img/fav.png">
+    <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
     <!-- Author Meta -->
     <meta name="author" content="colorlib">
     <!-- Meta Description -->
@@ -38,13 +38,15 @@
         <div class="header-top">
             <div class="container">
                 <div class="row align-items-center">
+                    <!-- 
                     <div class="col-lg-6 col-sm-6 col-6 header-top-left">
                         <ul>
                             <li><a href="#">Visit Us</a></li>
                             <li><a href="#">Buy Tickets</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-sm-6 col-6 header-top-right">
+                    -->
+                    <!-- <div class="col-lg-6 col-sm-6 col-6 header-top-right">
                         <div class="header-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -52,23 +54,27 @@
                             <a href="#"><i class="fa fa-behance"></i></a>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-                    <a href="{% url 'website:index' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+                    <ul class="nav-menu">
+                        <li><a href="{% url 'website:index' %}"><img src="{% static 'img/logo1.png' %}" width="30"
+                                    height="30" alt="" title="" /></a></li>
+                        <li><a href="{% url 'website:index' %}">Enjoy Travel Iran</a></li>
+                        <!--<a href="{% url 'website:index' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>-->
+                    </ul>
                 </div>
+
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="{% url 'website:index' %}">Home</a></li>
                         <li><a href="{% url 'website:about' %}">About</a></li>
-
                         <li><a href="{% url 'blog:index' %}">Blog</a></li>
-
-
-                        <li class="menu-has-children"><a href="">Pages</a>
+                        <!-- <li class="menu-has-children"><a href="">Pages</a>
                             <ul>
                                 <li><a href="elements.html">Elements</a></li>
                                 <li class="menu-has-children"><a href="">Level 2 </a>
@@ -78,7 +84,8 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> 
+                        --> 
                         <li><a href="{% url 'website:contact' %}">Contact</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
@@ -93,7 +100,7 @@
     {% block messages %}
     {% if messages %}
     {% for message in messages %}
-        <div class="alert {% if message.tags %} alert - {{ message.tags }} {% endif %}">{{ message|safe}} </div>
+    <div class="alert {% if message.tags %} alert - {{ message.tags }} {% endif %}">{{ message|safe}} </div>
     {% endfor %}
     {% endif %}
     {% endblock messages %}
@@ -109,9 +116,9 @@
                     <div class="single-footer-widget">
                         <h6>About Agency</h6>
                         <p>
-                            The world has become so fast paced that people don’t want to stand by reading a page of
-                            information, they would much rather look at a presentation and understand the message. It
-                            has come to a point
+                            Enjoy Travel Iran is an Iranian tour operator and travel agency with 2 years of experience
+                            with tourism in Iran. We offer a wide range of travel services to who loves travelling.
+
                         </p>
                     </div>
                 </div>
@@ -123,14 +130,14 @@
                                 <ul>
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Feature</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Portfolio</a></li>
+                                    <!--<li><a href="#">Services</a></li>
+                                    <li><a href="#">Portfolio</a></li> -->
                                 </ul>
                             </div>
                             <div class="col">
                                 <ul>
-                                    <li><a href="#">Team</a></li>
-                                    <li><a href="#">Pricing</a></li>
+                                    <!-- <li><a href="#">Team</a></li>
+                                    <li><a href="#">Pricing</a></li> -->
                                     <li><a href="#">Blog</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
@@ -142,8 +149,7 @@
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
                         <p>
-                            For business professionals caught between high OEM price and mediocre print and graphic
-                            output.
+                            Leave your Email here.
                         </p>
                         <div id="mc_embed_signup">
                             <form target="_blank"
@@ -178,19 +184,19 @@
 
             <div class="row footer-bottom d-flex justify-content-between align-items-center">
                 <p class="col-lg-8 col-sm-12 footer-text m-0">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
-                    made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                        target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                    Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Hassan Sheikh</a>
                 </p>
-                <div class="col-lg-4 col-sm-12 footer-social">
+                <!-- <div class="col-lg-4 col-sm-12 footer-social">
+                    
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-dribbble"></i></a>
                     <a href="#"><i class="fa fa-behance"></i></a>
+                    
                 </div>
+                -->
             </div>
         </div>
     </footer>
